@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - "6"
+
+cache: yarn
+
+before_script:
+  - npm install -g eslint --silent
+  - npm install -g eslint-plugin-html eslint-friendly-formatter eslint-plugin-babel eslint-plugin-import eslint-plugin-jsx-a11y --silent
+  - npm install -g eslint-config-standard eslint-plugin-standard eslint-plugin-promise --silent
+
+install:
+  - yarn install
+
+branches:
+  only:
+    - master
+    - stable
+
+notifications:
+  email:
+    - thedaviddias@gmail.com

@@ -1,39 +1,46 @@
 {
   "name": "sky-starter-kit",
   "version": "0.1.0",
-  "description": "A basic Front-End starter kit.",
+  "description": "A powerful Front-End Starter Kit using Express.js, SASS, Gulp",
   "engines": {
-    "node": "4.2.2"
+    "node": "6.9.1"
   },
   "main": "server.js",
   "scripts": {
     "test": "mocha test/test.js",
-    "lint": "eslint app/scripts/**/*.js",
-    "postinstall": "for file in `ls .git-hooks`; do ln -sf ../../.git-hooks/${file} .git/hooks/${file}; done"
+    "lint": "eslint --cache --ignore-pattern .gitignore app/scripts/**",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
+  "pre-commit": [
+    "precommit-msg",
+    "lint"
+  ],
   "repository": {
     "type": "git",
-    "url": "http://git.proximity.fr/proximity-mauritius/sky-starter-kit/"
+    "url": "https://www.github.com/thedaviddias/sky-starter-kit/"
   },
   "keywords": [
     "front-end",
     "starter",
-    "html5 boilerplate"
+    "kit",
+    "html5",
+    "boilerplate"
   ],
-  "author": "David Dias <diasd@proximity.bbdo.fr>",
+  "author": "David Dias <thedaviddias@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.15.2",
+    "body-parser": "^1.17.1",
     "compression": "^1.6.2",
     "cookie-parser": "^1.4.3",
-    "cors": "^2.7.1",
+    "cors": "^2.8.3",
     "errorhandler": "^1.4.3",
-    "express": "^4.14.0",
-    "express-session": "^1.14.0",
-    "helmet": "^2.1.2",
-    "method-override": "^2.3.6",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "helmet": "^3.6.0",
+    "method-override": "^2.3.8",
+    "morgan": "^1.8.1",
     "normalize": "^0.3.1",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.4.2"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
@@ -81,6 +88,7 @@
     "gulp-uglify": "^2.0.0",
     "htmlhint-stylish": "^1.0.3",
     "immutable-css": "^1.1.2",
+    "jquery": "^3.2.1",
     "jsonfile": "^2.3.1",
     "moment": "^2.14.1",
     "postcss-bem-linter": "^2.6.0",
@@ -91,6 +99,7 @@
     "postcss-scss": "^0.1.9",
     "precss": "^1.4.0",
     "pug-lint": "^2.3.0",
+    "slick": "^1.12.2",
     "stylefmt": "^4.2.3",
     "stylelint": "^7.1.0",
     "stylelint-config-primer": "^1.1.0",

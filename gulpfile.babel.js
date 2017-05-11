@@ -41,15 +41,6 @@ import del from 'del';
 import transform from 'vinyl-transform';
 import babelify from 'babelify';
 
-// Monitoring configuration
-import firebase from 'firebase-tools';
-import packageJson from './package.json';
-import moment from 'moment';
-import jsonfile from 'jsonfile';
-import puglint from 'pug-lint';
-import childProcess from 'child_process';
-import os from 'os';
-
 // [1] Autoprefixer is already injected into CssNext
 // [2] TODO : Find another way do disable if we use a CSS framework
 
@@ -157,6 +148,7 @@ export function lintStylesTask (done) {
 }
 
 export function stylesTask (done) {
+
   const processors = [
     require('postcss-normalize'), // [2]
     require('cssnano')({
@@ -166,6 +158,7 @@ export function stylesTask (done) {
     require('postcss-cssnext')({
       browsers: ['> 5%', 'ie >= 10', 'Firefox < 20', 'ios 6', 'android 4']
     })
+
   ];
   return gulp.src(config.styles.SRC)
     .pipe(plumber((error) => {
@@ -348,83 +341,6 @@ export function browserTask () {
 
 // ########################################
 
-export function monitoring (callback) {
-  // Empty jsonfile
-
-  let nbrErrorJade;
-  let nbrErrorJS;
-  let nbrErrorCSS;
-  let nbrWarningJS;
-
-  const idComputer = os.hostname();
-  const nameProject = packageJson.name;
-  const firebaseToken = '1/NEpgg17d3mIGjrlH2iruYX8t2Jkm5qH0hN-eg8DbWWM';
-  const firebaseData = './firebase-data.json';
-
-  const currentTime = moment().format();
-
-  // Ask prompt if idComputer is different and ask if good projectName
-
-  stylelint.lint({
-    files: config.styles.SRC,
-  })
-  .then((data) => {
-    const dataOutput = data.output;
-    const dataFormat = dataOutput.match(/\{[^]*\}/gm);
-    const errorCSS = JSON.parse(dataFormat);
-
-    nbrErrorCSS = errorCSS.warnings.length;
-  })
-  .then(() => {
-    // In progress
-    const CLIpug = require('pug-lint');
-
-    const cli = new CLIpug({
-      _basePath: '.'
-    });
-  })
-  .then(() => {
-    const CLIEngine = require('eslint').CLIEngine;
-    const cli = new CLIEngine({
-      useEslintrc: true,
-      configFile: './.eslintrc',
-    });
-    const report = cli.executeOnFiles(config.scripts.ALL);
-
-    nbrErrorJS = report.errorCount;
-    nbrWarningJS = report.warningCount;
-  })
-  .then(() => {
-    const nbrErrorJade = 'undefined';
-
-    const obj = {
-      'computerId': idComputer,
-      'nbrErrors': {
-        'errorCss': nbrErrorCSS,
-        'errorJade': nbrErrorJade,
-        'warningJs': nbrWarningJS,
-        'errorJs': nbrErrorJS
-      },
-      'currentTime': currentTime
-    };
-
-    jsonfile.writeFile(firebaseData, obj, { spaces: 2 }, (err) => {
-      // console.error(err)
-    });
-  })
-  .then(() => {
-    // firebase login
-    childProcess.exec('firebase database:push /' + nameProject + ' firebase-data.json', (error, stdout, stderr) => {
-      // console.log(stdout);
-    });
-  })
-  .catch((err) => {
-    console.error(err.stack);
-  });
-}
-
-// ########################################
-
 export function watchTask (done) {
   gulp.watch(config.fonts.ALL, gp(copyFonts));
   gulp.watch(config.styles.ALL, gp(css));
@@ -453,7 +369,7 @@ const js = gs(lintJavaScript, javaScriptTask);
 export { js };
 
 // Global tasks
-const serve = gs(gp(browserTask, serverTask, stylesTask, htmlTask, javaScriptTask, lintStylesTask, lintJavaScript, monitoring, watchTask), (done) => {
+const serve = gs(gp(browserTask, serverTask, stylesTask, htmlTask, javaScriptTask, lintStylesTask, lintJavaScript, watchTask), (done) => {
   done()
 });
 export { serve };

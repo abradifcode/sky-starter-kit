@@ -1,6 +1,9 @@
 # Sky Starter Kit
 
-[![build status](http://git.proximity.fr/proximity-mauritius/sky-starter-kit/badges/develop/build.svg)](http://git.proximity.fr/proximity-mauritius/sky-starter-kit/commits/develop)
+[![NPM Version](https://badge.fury.io/js/sky-starter-kit.svg)](https://www.npmjs.com/package/sky-starter-kit)
+[![Build Status](https://travis-ci.org/lob/sky-starter-kit.svg)](https://travis-ci.org/lob/sky-starter-kit)
+[![Coverage Status](https://coveralls.io/repos/lob/sky-starter-kit/badge.svg?branch=master&service=github)](https://coveralls.io/github/lob/sky-starter-kit?branch=master)
+[![Dependency Status](https://david-dm.org/lob/sky-starter-kit.svg)](https://david-dm.org/lob/sky-starter-kit)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg)](https://github.com/RichardLitt/standard-readme)
 
@@ -28,7 +31,7 @@
 
 To get you started you can simply clone the angular-seed repository and install the dependencies:
 
-* git clone --depth 1 http://git.proximity.fr/proximity-mauritius/sky-starter-kit (--depth 1 removes all but one .git commit history)
+* git clone --depth 1 http://www.github.com/thedaviddias/sky-starter-kit/t (--depth 1 removes all but one .git commit history)
 
 ### Update your Gulp globally
 
@@ -53,79 +56,7 @@ npm install -g gulp-cli
 
 ### Tasks
 
-#### Task Listing
-
-* `gulp help`
-
-    Displays all of the available gulp tasks.
-
-#### Code Analysis
-
-* `gulp vet`
-
-    Performs static code analysis on all javascript files. Runs jshint and jscs.
-
-#### Testing
-
-* `gulp test`
-
-    Runs all unit tests using karma runner, mocha, chai and sinon with phantomjs. Depends on vet task, for code analysis.
-
-#### Cleaning Up
-
-* `gulp clean`
-
-    Remove all files from the build and temp folders
-
-* `gulp clean-images`
-
-    Remove all images from the build folder
-
-* `gulp clean-code`
-
-    Remove all javascript and html from the build folder
-
-* `gulp clean-fonts`
-
-    Remove all fonts from the build folder
-
-* `gulp clean-styles`
-
-    Remove all styles from the build folder
-
-#### Fonts and Images
-
-* `gulp fontsTask`
-
-    Copy all fonts from source to the build folder
-
-* `gulp imagesTask`
-
-    Copy all images from source to the build folder
-
-#### Styles
-
-* `gulp stylesTask`
-
-    Compile with PostCSS files to CSS, add vendor prefixes, and copy to the build folder
-
-#### Serving Development Code
-
-* `gulp serve-dev`
-
-    Serves the development code and launches it in a browser. The goal of building for development is to do it as fast as possible, to keep development moving efficiently.
-
-#### Building Production Code
-
-* `gulp build`
-
-    Copies all fonts, copies images and runs `gulp optimize` to build the production code to the build folder.
-
-#### Serving Production Code
-
-* `gulp serve-build`
-
-    Serve the optimized code from the build folder and launch it in a browser.
+...
 
 ## Contribute
 
