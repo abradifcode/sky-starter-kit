@@ -1,10 +1,10 @@
 # Sky Starter Kit
 
 [![Join the chat at https://gitter.im/sky-starter-kit/Lobby](https://badges.gitter.im/sky-starter-kit/Lobby.svg)](https://gitter.im/sky-starter-kit/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 [![NPM Version](https://badge.fury.io/js/sky-starter-kit.svg)](https://www.npmjs.com/package/sky-starter-kit)
 [![Build Status](https://travis-ci.org/thedaviddias/sky-starter-kit.svg)](https://travis-ci.org/thedaviddias/sky-starter-kit)
 [![Coverage Status](https://coveralls.io/repos/github/thedaviddias/sky-starter-kit/badge.svg?branch=master)](https://coveralls.io/github/thedaviddias/sky-starter-kit?branch=master)
+[![Build status](https://ci.appveyor.com/api/projects/status/c5gwys4vn04s78h6?svg=true)](https://ci.appveyor.com/project/thedaviddias/sky-starter-kit)
 [![Dependency Status](https://david-dm.org/thedaviddias/sky-starter-kit.svg)](https://david-dm.org/thedaviddias/sky-starter-kit)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg)](https://github.com/RichardLitt/standard-readme)

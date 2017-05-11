@@ -87,3 +87,5 @@ firebase-data.json
 
 .sass-cache/
 *.css.map
+
+.vscode
