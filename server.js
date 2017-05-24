@@ -1,12 +1,5 @@
-// include and initialize the rollbar library with your access token
-const rollbar = require("rollbar");
-rollbar.init("d79d05c5ace54fa89346a600da03deff");
-
-// record a generic message and send to rollbar
-rollbar.reportMessage("Hello world!");
-
-
 const express = require('express');
+const rollbar = require("rollbar");
 const http = require('http');
 const path = require('path');
 const fs = require('fs');
@@ -50,6 +43,9 @@ app.use(cookie());
 app.use('/bower_components', express.static('./bower_components'));
 
 app.use(express.static(path.join(__dirname, 'build')));
+
+// Use the rollbar error handler to send exceptions to your rollbar account
+app.use(rollbar.errorHandler('d79d05c5ace54fa89346a600da03deff'));
 
 // development only
 if ('development' == app.get('env')) {
