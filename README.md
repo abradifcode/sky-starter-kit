@@ -1,14 +1,32 @@
 # Sky Starter Kit
 
-[![Join the chat at https://gitter.im/sky-starter-kit/Lobby](https://badges.gitter.im/sky-starter-kit/Lobby.svg)](https://gitter.im/sky-starter-kit/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![NPM Version](https://badge.fury.io/js/sky-starter-kit.svg)](https://www.npmjs.com/package/sky-starter-kit)
-[![Build Status](https://travis-ci.org/thedaviddias/sky-starter-kit.svg)](https://travis-ci.org/thedaviddias/sky-starter-kit)
+[![Join the chat at https://gitter.im/sky-starter-kit/Lobby][gitter-image]][gitter-url] [![Build status][travis-image]][travis-url] [![NPM Version][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![Known Vulnerabilities][snyk-image]][snyk-url] [![javascript style guide][standard-image]][standard-url] [![standard-readme compliant][standard-readme-image]][standard-readme-url]
+
+
+[gitter-image]: https://badges.gitter.im/sky-starter-kit/Lobby.svg
+[gitter-url]: https://gitter.im/sky-starter-kit/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+[travis-image]: https://travis-ci.org/thedaviddias/sky-starter-kit.svg
+[travis-url]: https://travis-ci.org/thedaviddias/sky-starter-kit
+[npm-image]: https://badge.fury.io/js/sky-starter-kit.svg
+[npm-url]: https://npmjs.org/package/sky-starter-kit
+[downloads-image]: https://img.shields.io/npm/dm/sky-starter-kit.svg
+[downloads-url]: https://npmjs.org/package/sky-starter-kit
+[snyk-image]: https://snyk.io/test/github/thedaviddias/sky-starter-kit/badge.svg
+[snyk-url]: https://snyk.io/test/github/thedaviddias/sky-starter-kit
+
+
+[standard-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
+[standard-url]: https://standardjs.com
+[standard-readme-image]: https://img.shields.io/badge/standard--readme-OK-green.svg
+[standard-readme-url]: https://github.com/RichardLitt/standard-readme
+
+
+
 [![Coverage Status](https://coveralls.io/repos/github/thedaviddias/sky-starter-kit/badge.svg?branch=master)](https://coveralls.io/github/thedaviddias/sky-starter-kit?branch=master)
 [![Build status](https://ci.appveyor.com/api/projects/status/c5gwys4vn04s78h6?svg=true)](https://ci.appveyor.com/project/thedaviddias/sky-starter-kit)
 [![Dependency Status](https://david-dm.org/thedaviddias/sky-starter-kit.svg)](https://david-dm.org/thedaviddias/sky-starter-kit)
-[![Known Vulnerabilities](https://snyk.io/test/github/thedaviddias/sky-starter-kit/badge.svg)](https://snyk.io/test/github/thedaviddias/sky-starter-kit)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg)](https://github.com/RichardLitt/standard-readme)
+
+
 
 > This project provides a starter-kit for every possible Front-End project using Gulp and Express.js.
 
