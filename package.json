@@ -9,7 +9,9 @@
   "scripts": {
     "test": "mocha test/test.js",
     "lint": "eslint --cache --ignore-pattern .gitignore app/scripts/**",
-    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "pre-commit": [
     "precommit-msg",
@@ -41,7 +43,8 @@
     "morgan": "^1.8.1",
     "normalize": "^0.3.1",
     "rollbar": "^2.0.2",
-    "serve-favicon": "^2.4.2"
+    "serve-favicon": "^2.4.2",
+    "snyk": "^1.41.1"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
@@ -113,5 +116,6 @@
     "vinyl-transform": "^1.0.0",
     "watchify": "^3.7.0",
     "wiredep": "^4.0.0"
-  }
+  },
+  "snyk": true
 }
