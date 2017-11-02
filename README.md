@@ -1,5 +1,7 @@
 # Sky Starter Kit
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/thedaviddias/sky-starter-kit.svg)](https://greenkeeper.io/)
+
 [![Join the chat at https://gitter.im/sky-starter-kit/Lobby][gitter-image]][gitter-url] [![Build status][travis-image]][travis-url] [![NPM Version][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![Known Vulnerabilities][snyk-image]][snyk-url] [![javascript style guide][standard-image]][standard-url] [![standard-readme compliant][standard-readme-image]][standard-readme-url]
 
 
